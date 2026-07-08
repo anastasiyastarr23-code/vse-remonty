@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Ремонт квартир под ключ в Ташкенте — Все ремонты</title>
+<meta name="description" content="Ремонт квартир под ключ в Ташкенте. Фиксированная смета без скрытых доплат, гарантия на работы, бесплатный замер." />
+<meta property="og:title" content="Ремонт квартир под ключ в Ташкенте — Все ремонты" />
+<meta property="og:description" content="Фиксированная смета, гарантия, бесплатный замер. Берём весь процесс на себя." />
+<meta property="og:image" content="images/portfolio-01-livingroom.jpg" />
+<meta property="og:type" content="website" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+</head>
+<body>
+
+<!-- HEADER -->
+<header id="header">
+  <a href="#" class="header-pill-logo" aria-label="Все ремонты — главная">
+    <img src="images/logo-wordmark.png?v=2" alt="Все ремонты" />
+  </a>
+  <nav class="header-pill-nav" aria-label="Основная навигация">
+    <a href="#services">Услуги</a>
+    <a href="#stages">Этапы</a>
+    <a href="#prices">Цены</a>
+    <a href="#portfolio">Портфолио</a>
+    <a href="#faq">FAQ</a>
+  </nav>
+  <div class="header-right">
+    <a href="tel:+998900621818" class="header-phone">+998 90 062-18-18</a>
+    <a href="#form1" class="btn btn-orange" style="padding:12px 36px;">Заявка</a>
+    <button class="burger" id="burgerBtn" aria-label="Меню" aria-expanded="false">
+      <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="white" stroke-width="1.8" stroke-linecap="round"><line x1="1" y1="5" x2="17" y2="5"/><line x1="1" y1="13" x2="17" y2="13"/></svg>
+    </button>
+  </div>
+</header>
+<nav class="mobile-nav" id="mobileNav">
+  <button class="mobile-nav-close" id="mobileNavClose">✕</button>
+  <a href="#services" data-close>Услуги</a>
+  <a href="#stages" data-close>Этапы работы</a>
+  <a href="#prices" data-close>Цены</a>
+  <a href="#portfolio" data-close>Портфолио</a>
+  <a href="#reviews" data-close>Отзывы</a>
+  <a href="#faq" data-close>FAQ</a>
+  <a href="#form1" class="btn btn-orange" data-close style="justify-content:center;">Оставить заявку</a>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-left">
+    <h1 class="hero-title gsap-init">Ремонт квартир под ключ — <span class="hl">без лишних подрядчиков</span> и нервов</h1>
+    <p class="hero-sub gsap-init">Берём весь процесс на себя: от замеров и сметы до финальной уборки. Фиксируем цену и сроки в договоре.</p>
+    <div class="hero-actions gsap-init">
+      <a href="https://t.me/BigMaster_uzb" target="_blank" rel="noopener" class="btn btn-orange">Рассчитать стоимость ремонта</a>
+      <a href="tel:+998900621818" class="btn btn-line">Позвонить</a>
+    </div>
+    <div class="hero-facts gsap-init">
+      <div class="hero-fact"><b>1</b><span>договор на всё</span></div>
+      <div class="hero-fact"><b>0</b><span>скрытых доплат</span></div>
+      <div class="hero-fact"><b>6</b><span>этапов под контролем</span></div>
+    </div>
+  </div>
+  <div class="hero-right gsap-init">
+    <img id="heroMainImg" src="images/hero-main.jpg" alt="Квартира после ремонта под ключ" />
+    <div class="hero-badge b1"><span class="dot"></span>Замер бесплатно</div>
+    <div class="hero-badge b2"><span class="dot"></span>Смета за 1 день</div>
+    <div class="hero-cards-strip">
+      <div class="hero-mini active" data-src="images/hero-main.jpg" data-alt="Квартира после ремонта"><img src="images/portfolio-01-livingroom.jpg" alt="Гостиная" /></div>
+      <div class="hero-mini" data-src="images/portfolio-02-kitchen.jpg" data-alt="Кухня после ремонта"><img src="images/portfolio-02-kitchen.jpg" alt="Кухня" /></div>
+      <div class="hero-mini" data-src="images/portfolio-04-bathroom.jpg" data-alt="Санузел после ремонта"><img src="images/portfolio-04-bathroom.jpg" alt="Санузел" /></div>
+    </div>
+  </div>
+</section>
+
+<!-- FORM 1 -->
+<div id="form1" class="form-section s1" style="padding: var(--sp-7) 0;">
+  <div class="container">
+    <div class="fs-grid">
+      <div class="fs-text-card gsap-init">
+        <div class="eyebrow">Бесплатный замер</div>
+        <h2 style="margin-top:0;">Рассчитаем стоимость вашего ремонта за 1 день</h2>
+        <p style="color:var(--muted); max-width:380px; margin-top: var(--sp-3);">Оставьте заявку — перезвоним в течение 30 минут и согласуем дату замера.</p>
+        <div class="fs-checks" style="margin-top: var(--sp-4);">
+          <div class="fs-check"><i><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2 2 4-4" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></i>Замер — бесплатно</div>
+          <div class="fs-check"><i><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2 2 4-4" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></i>Смета за 1 рабочий день</div>
+          <div class="fs-check"><i><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2 2 4-4" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></i>Без обязательств</div>
+        </div>
+      </div>
+      <div class="lead-card gsap-init">
+        <h3>Оставить заявку</h3>
+        <div class="lc-sub">Телефон и площадь — остальное обсудим на звонке</div>
+        <form class="lead-form" data-id="hero" novalidate>
+          <div class="ff">
+            <div class="f-field"><label for="f1-name">Имя</label><input type="text" id="f1-name" name="name" placeholder="Как вас зовут?" /></div>
+            <div class="f-field"><label for="f1-phone">Телефон *</label><input type="tel" id="f1-phone" name="phone" placeholder="+998 00 000-00-00" required /><span class="f-err">Введите корректный номер</span></div>
+            <button type="submit" class="f-submit">Получить расчёт бесплатно →</button>
+            <p class="f-note">Нажимая кнопку, вы соглашаетесь на обработку персональных данных</p>
+          </div>
+          <div class="f-ok">
+            <svg width="38" height="38" viewBox="0 0 38 38" fill="none"><circle cx="19" cy="19" r="19" fill="#2eb872" fill-opacity=".15"/><path d="M11 19l5.5 5.5L27 14" stroke="#2eb872" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <b>Заявка принята!</b><span>Позвоним в течение 30 минут</span>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PAIN -->
+<section id="pain">
+  <div class="container">
+    <div class="shead gsap-init">
+      <div class="eyebrow">Знакомые проблемы</div>
+      <h2>Знакомые <span class="hl">проблемы</span> при ремонте?</h2>
+    </div>
+    <div class="pain-grid">
+      <div class="pn pn-a gsap-stagger">
+        <div class="pnum">01</div>
+        <h4>Срывы сроков из-за разных бригад</h4>
+        <p>Электрик не ждёт сантехника, отделочник приходит раньше времени — работа стоит, деньги уходят.</p>
+      </div>
+      <div class="pn pn-b gsap-stagger">
+        <div class="pnum">02</div>
+        <h4>Непонятная итоговая смета</h4>
+        <p>Доплаты «по ходу» съедают ещё 30–50% сверху.</p>
+      </div>
+      <div class="pn pn-c gsap-stagger">
+        <div class="pnum">03</div>
+        <h4>Никто не координирует специалистов</h4>
+        <p>Электрики, сантехники, плиточники — каждый сам по себе.</p>
+      </div>
+      <div class="pn pn-d gsap-stagger">
+        <div class="pnum">04</div>
+        <div><h4>Не с кого спросить за результат</h4><p>Каждый кивает на другого — ответственного нет.</p></div>
+      </div>
+    </div>
+    <div class="pain-answer gsap-init">
+      <p>Один договор. Один ответственный. <em>Фиксированная смета.</em></p>
+      <a href="#form1" class="btn btn-orange">Оставить заявку</a>
+    </div>
+  </div>
+</section>
+
+<!-- STAGES -->
+<section id="stages">
+  <div class="container">
+    <div class="shead split gsap-init">
+      <div><div class="eyebrow">Что входит</div><h2>Ремонт под ключ — что это значит</h2></div>
+      <p>Шесть этапов под одним управлением. Вы только принимаете результат.</p>
+    </div>
+    <div class="stage-mosaic">
+      <div class="sg sg1 gsap-stagger"><span class="sidx">01</span><h4>Замер и консультация</h4><p>Снимаем точные размеры, обсуждаем пожелания и материалы.</p></div>
+      <div class="sg sg2 gsap-stagger"><span class="sidx">02</span><h4>Смета и договор</h4><p>Фиксируем стоимость и сроки в договоре.</p></div>
+      <div class="sg sg3 gsap-stagger"><span class="sidx">03</span><h4>Демонтаж и черновые работы</h4><p>Демонтаж старой отделки, выравнивание стен, стяжка.</p></div>
+      <div class="sg sg4 gsap-stagger"><span class="sidx">04</span><h4>Инженерные сети</h4><p>Электромонтаж, сантехника — всё по нормам.</p></div>
+      <div class="sg sg5 gsap-stagger"><span class="sidx">05</span><h4>Чистовая отделка</h4><p>Штукатурка, покраска, укладка плитки и напольных покрытий.</p></div>
+      <div class="sg sg6 gsap-stagger"><span class="sidx">06</span><h4>Сдача объекта и уборка</h4><p>Финальная приёмка вместе с вами, генеральная уборка.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="container">
+    <div class="shead gsap-init"><div class="eyebrow">Услуги</div><h2>Виды ремонта</h2></div>
+    <div class="svc-mosaic">
+      <div class="svc-col-left">
+        <div class="svc-card big gsap-stagger">
+          <img src="images/service-turnkey.jpg" alt="Ремонт под ключ в новостройке без отделки" />
+          <div class="svc-body">
+            <h4>Ремонт под ключ «с нуля»</h4>
+            <p>Новостройка без отделки. Берём объект в бетоне и сдаём полностью готовым к заселению.</p>
+            <a href="#form1">Узнать стоимость →</a>
+          </div>
+        </div>
+        <div class="svc-extra gsap-stagger">
+          <span>и любые другие ремонты</span>
+          <a href="#form1" class="btn btn-line svc-extra-btn">Обсудить проект →</a>
+        </div>
+      </div>
+      <div class="svc-col">
+        <div class="svc-card gsap-stagger">
+          <img src="images/service-cosmetic.jpg" alt="Косметический ремонт квартиры" />
+          <div class="svc-body">
+            <h4>Косметический ремонт</h4>
+            <p>Обновление отделки без затрагивания инженерных сетей.</p>
+            <a href="#form1">Узнать стоимость →</a>
+          </div>
+        </div>
+        <div class="svc-card gsap-stagger">
+          <img src="images/service-capital.jpg" alt="Капитальный ремонт квартиры" />
+          <div class="svc-body">
+            <h4>Капитальный ремонт</h4>
+            <p>Полная замена коммуникаций и отделки.</p>
+            <a href="#form1">Узнать стоимость →</a>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PORTFOLIO -->
+<section id="portfolio">
+  <div class="container">
+    <div class="shead split gsap-init">
+      <div><div class="eyebrow">Портфолио</div><h2>Примеры реализованных проектов</h2></div>
+      <p>Визуализации в нашем фирменном стиле отделки.</p>
+    </div>
+    <div class="pf-mosaic">
+      <div class="pf-item pf1 gsap-stagger"><img src="images/portfolio-01-livingroom.jpg" alt="Гостиная после ремонта в светлом минималистичном стиле" /><div class="pl"><span>Гостиная — светлый минимализм</span></div></div>
+      <div class="pf-item pf2 gsap-stagger"><img src="images/portfolio-02-kitchen.jpg" alt="Кухня после ремонта в скандинавском стиле" /><div class="pl"><span>Кухня — скандинавский стиль</span></div></div>
+      <div class="pf-item pf3 gsap-stagger"><img src="images/portfolio-03-bedroom.jpg" alt="Спальня после ремонта" /><div class="pl"><span>Спальня</span></div></div>
+      <div class="pf-item pf4 gsap-stagger"><img src="images/portfolio-04-bathroom.jpg" alt="Санузел после ремонта" /><div class="pl"><span>Санузел</span></div></div>
+      <div class="pf-item pf5 gsap-stagger"><img src="images/portfolio-05-hallway.jpg" alt="Прихожая после ремонта" /><div class="pl"><span>Прихожая</span></div></div>
+      <div class="pf-item pf6 gsap-stagger"><img src="images/portfolio-06-kids-room.jpg" alt="Детская комната после ремонта" /><div class="pl"><span>Детская</span></div></div>
+    </div>
+    <p class="pf-note gsap-init">Визуализации в нашем фирменном стиле отделки — ориентир по качеству и эстетике, которую мы используем в работе</p>
+  </div>
+</section>
+
+<!-- FORM 2 -->
+<div class="form-section s2">
+  <div class="f2-wrap gsap-init">
+    <div class="eyebrow f2-eyebrow">Бесплатный замер</div>
+    <h2 class="f2-title">Понравились проекты?<br>Рассчитаем для вашей квартиры</h2>
+    <p class="f2-sub">Перезвоним в течение 30 минут и назначим замер.</p>
+    <form class="lead-form f2-form" data-id="portfolio" novalidate>
+      <div class="ff">
+        <div class="f2-row">
+          <input type="text" name="name" placeholder="Ваше имя" class="f2-input" />
+          <input type="tel" id="f2-phone" name="phone" placeholder="+998 00 000-00-00" required class="f2-input" />
+          <button type="submit" class="f2-btn">Отправить →</button>
+        </div>
+        <span class="f-err f2-err">Введите корректный номер</span>
+        <p class="f-note f2-note">Нажимая кнопку, вы соглашаетесь на обработку персональных данных</p>
+      </div>
+      <div class="f-ok f2-ok">
+        <svg width="38" height="38" viewBox="0 0 38 38" fill="none"><circle cx="19" cy="19" r="19" fill="rgba(255,255,255,.2)"/><path d="M11 19l5.5 5.5L27 14" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <b>Заявка принята!</b><span>Позвоним в течение 30 минут</span>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- PROCESS -->
+<section id="process">
+  <div class="container">
+    <div class="shead gsap-init"><div class="eyebrow">Прозрачность</div><h2>Как мы работаем</h2></div>
+    <div class="process-grid">
+      <div class="proc-mosaic gsap-init">
+        <div class="pc pc1"><img src="images/process-measurement.jpg" alt="Замер квартиры перед ремонтом" /></div>
+        <div class="pc pc2"><img src="images/process-finishing.jpg" alt="Чистовая отделка — финальный этап" /></div>
+        <div class="pc pc3"><img src="images/process-rough-works.jpg" alt="Черновые работы в процессе ремонта" /></div>
+      </div>
+      <div class="process-steps">
+        <div class="pstep gsap-stagger"><div class="pn2">01</div><div><h4>Фиксируем смету в договоре</h4><p>Никаких доплат «по ходу». Сумма согласована заранее.</p></div></div>
+        <div class="pstep gsap-stagger"><div class="pn2">02</div><div><h4>Контролируем закупку материалов</h4><p>Работаем с проверенными поставщиками, платите по чекам.</p></div></div>
+        <div class="pstep gsap-stagger"><div class="pn2">03</div><div><h4>Прораб на объекте каждый день</h4><p>Фотоотчёты по каждому этапу прямо в мессенджер.</p></div></div>
+        <div class="pstep gsap-stagger"><div class="pn2">04</div><div><h4>Гарантия на выполненные работы</h4><p>Дефекты по нашей вине устраняем бесплатно.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICES -->
+<section id="prices">
+  <div class="container">
+    <div class="shead gsap-init"><div class="eyebrow">Стоимость</div><h2>Сколько стоит ремонт под ключ</h2><p>Точная сумма зависит от площади — после бесплатного замера присылаем смету в течение 1 дня.</p></div>
+    <div class="price-mosaic">
+      <div class="price-card gsap-init">
+        <div>
+          <h3>Расчёт стоимости</h3>
+          <div class="pc-sub">Ориентировочные вилки — точная сумма после замера</div>
+          <div class="price-rows">
+            <div class="price-row"><span>Косметический ремонт</span><b>от __ $/м²</b></div>
+            <div class="price-row"><span>Капитальный ремонт</span><b>от __ $/м²</b></div>
+            <div class="price-row"><span>Под ключ «с нуля»</span><b>от __ $/м²</b></div>
+          </div>
+        </div>
+        <a href="#form1" class="btn btn-orange" style="margin-top: var(--sp-4);">Получить точный расчёт →</a>
+      </div>
+      <div class="price-side">
+        <div class="pside-card tall gsap-stagger"><h5>Фиксированная смета</h5><p>Цена не меняется без вашего согласования.</p></div>
+        <div class="pside-card gsap-stagger"><h5>Смета за 1 рабочий день</h5><p>Подробная смета после бесплатного замера.</p></div>
+        <div class="pside-card gsap-stagger"><h5>Материалы по чекам</h5><p>Без накруток и подмены.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY -->
+<section id="why">
+  <div class="container">
+    <div class="shead gsap-init"><div class="eyebrow">Почему мы</div><h2>Почему выбирают нас</h2></div>
+    <div class="why-mosaic">
+      <div class="wc wc1 gsap-stagger"><span class="wnum">01</span><h4>Фиксированная смета без скрытых доплат</h4><p>Итоговая сумма совпадёт с той, что в договоре.</p></div>
+      <div class="wc wc2 gsap-stagger"><span class="wnum">02</span><h4>Соблюдение сроков</h4><p>Прораб контролирует график на каждом этапе.</p></div>
+      <div class="wc wc3 gsap-stagger"><span class="wnum">03</span><h4>Проверенная бригада на объекте</h4><p>Никаких случайных подрядчиков со стороны.</p></div>
+      <div class="wc wc4 gsap-stagger"><span class="wnum">04</span><h4>Гарантия на работы</h4><p>Устраняем дефекты по нашей вине бесплатно.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section id="reviews">
+  <div class="container">
+    <div class="shead gsap-init"><div class="eyebrow">Отзывы</div><h2>Что говорят клиенты</h2></div>
+    <div class="rev-row">
+      <div class="rev-card rev1 gsap-stagger">
+        <div class="rev-stars">★★★★★</div>
+        <p class="rev-text">«Делали ремонт двухкомнатной квартиры под ключ. Понравилось, что не пришлось самим искать электрика, сантехника и плиточника — всё решал один прораб. Сроки сдвинулись всего на неделю, для ремонта это нормально.»</p>
+        <div class="rev-author">Акмаль Т.</div><div class="rev-meta">Ремонт 2-комнатной квартиры</div>
+      </div>
+      <div class="rev-card rev2 gsap-stagger">
+        <div class="rev-stars">★★★★★</div>
+        <p class="rev-text">«Боялись, что насчитают доплат сверху сметы — этого не было. Цена в договоре совпала с финальной. Хотелось бы больше фото-отчётов в начале, но потом стали присылать регулярно.»</p>
+        <div class="rev-author">Светлана К.</div><div class="rev-meta">Капитальный ремонт</div>
+      </div>
+      <div class="rev-card rev3 gsap-stagger">
+        <div class="rev-stars">★★★★★</div>
+        <p class="rev-text">«Заказывали ремонт студии под ключ с нуля — новостройка без отделки. Ребята взяли всё на себя: смета, закупка, координация мастеров. Въехали через два месяца. Доволен результатом.»</p>
+        <div class="rev-author">Дмитрий П.</div><div class="rev-meta">Ремонт студии, новостройка</div>
+      </div>
+      <div class="rev-card rev4 gsap-stagger">
+        <div class="rev-stars">★★★★★</div>
+        <p class="rev-text">«Заказывали ремонт кухни и санузла. Сначала приехали на замер, всё посчитали, объяснили этапы. Качество отделки устроило, претензий по гарантии пока не было.»</p>
+        <div class="rev-author">Руслан М.</div><div class="rev-meta">Ремонт кухни и ванной</div>
+      </div>
+      <div class="rev-card rev5 gsap-stagger">
+        <div class="rev-stars">★★★★★</div>
+        <p class="rev-text">«Обратились после того, как предыдущий подрядчик пропал после аванса. Ребята приехали, оценили объём, составили смету — всё прозрачно. Ремонт сделали в срок, без неприятных сюрпризов.»</p>
+        <div class="rev-author">Наталья В.</div><div class="rev-meta">Капитальный ремонт, 3-комнатная</div>
+      </div>
+      <div class="rev-card rev6 gsap-stagger">
+        <div class="rev-stars">★★★★★</div>
+        <p class="rev-text">«Делали косметический ремонт трёхкомнатной квартиры. Порадовало, что работали аккуратно — ничего не испортили, убрали за собой. Соседи даже не жаловались на шум в подъезде.»</p>
+        <div class="rev-author">Камола Р.</div><div class="rev-meta">Косметический ремонт, 3-комнатная</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FORM 3 -->
+<div class="form-section s3">
+  <div class="container">
+    <div class="fs-grid">
+      <div>
+        <div class="eyebrow gsap-init">Бесплатно</div>
+        <h2 class="gsap-init">Оставьте заявку — приедем на замер бесплатно и посчитаем точную смету за 1 день</h2>
+        <p class="lead-sub gsap-init">Без обязательств. Просто расскажите о своей квартире.</p>
+      </div>
+      <div class="lead-card gsap-init">
+        <h3>Оставить заявку</h3>
+        <div class="lc-sub">Перезвоним в течение 30 минут</div>
+        <form class="lead-form" data-id="reviews" novalidate>
+          <div class="ff">
+            <div class="f-field"><label for="f3-name">Имя</label><input type="text" id="f3-name" name="name" placeholder="Как вас зовут?" /></div>
+            <div class="f-field"><label for="f3-phone">Телефон *</label><input type="tel" id="f3-phone" name="phone" placeholder="+998 00 000-00-00" required /><span class="f-err">Введите корректный номер</span></div>
+            <button type="submit" class="f-submit">Оставить заявку →</button>
+            <p class="f-note">Нажимая кнопку, вы соглашаетесь на обработку персональных данных</p>
+          </div>
+          <div class="f-ok">
+            <svg width="38" height="38" viewBox="0 0 38 38" fill="none"><circle cx="19" cy="19" r="19" fill="#2eb872" fill-opacity=".15"/><path d="M11 19l5.5 5.5L27 14" stroke="#2eb872" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <b>Заявка принята!</b><span>Позвоним в течение 30 минут</span>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="container">
+    <div class="faq-grid">
+      <div class="faq-side gsap-init">
+        <div>
+          <div class="eyebrow">FAQ</div>
+          <h2>Частые вопросы</h2>
+          <p>Не нашли ответ — позвоните, расскажем подробно.</p>
+        </div>
+        <a href="tel:+998900621818" class="faq-call-mini">
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M2 2.5C2 2.5 3 1 4.5 1c.5 0 1 .3 1.3.8L7 4a1 1 0 01-.2 1.3L5.7 6.4c.6 1.1 1.5 2 2.6 2.6l1.1-1.1A1 1 0 0110.7 8L13 9.2c.5.3.8.8.8 1.3C13.8 12 12 14 12 14a1 1 0 01-.7.3C5.3 14.3 1.7 10.7 1.7 4.7A1 1 0 012 4z"/></svg>
+          Позвонить
+        </a>
+      </div>
+      <div class="faq-list gsap-init">
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">Сколько стоит ремонт квартиры под ключ?<span class="faq-icon"></span></button>
+          <div class="faq-a"><div class="faq-a-inner">Стоимость зависит от площади, состояния квартиры и объёма работ. Точную сумму назовём после бесплатного замера — смета за 1 рабочий день.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">Сколько по времени занимает ремонт?<span class="faq-icon"></span></button>
+          <div class="faq-a"><div class="faq-a-inner">Косметический ремонт — от 3–4 недель. Капитальный или под ключ с нуля — от 2 до 4 месяцев. Точные сроки фиксируем в договоре.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">Кто закупает материалы?<span class="faq-icon"></span></button>
+          <div class="faq-a"><div class="faq-a-inner">Закупку берём на себя — работаем с проверенными поставщиками. Платите по реальным чекам без наценки.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">Что если что-то пойдёт не так? Какая гарантия?<span class="faq-icon"></span></button>
+          <div class="faq-a"><div class="faq-a-inner">После сдачи объекта выдаём письменную гарантию. Дефекты по вине наших мастеров устраняем за свой счёт.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">Можно ли жить в квартире во время ремонта?<span class="faq-icon"></span></button>
+          <div class="faq-a"><div class="faq-a-inner">При косметическом — возможно, если поэтапно. При капитальном ремонте проживание не рекомендуется.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">Как заключается договор?<span class="faq-icon"></span></button>
+          <div class="faq-a"><div class="faq-a-inner">После замера и согласования сметы составляем договор подряда с перечнем работ, стоимостью и сроками.</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- FOOTER -->
+<footer id="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <img src="images/logo-wordmark.png?v=2" alt="Все ремонты" class="footer-logo-img" />
+        <p class="footer-tag">Ремонт квартир под ключ в Ташкенте. Фиксированная смета. Один договор. Один ответственный.</p>
+      </div>
+      <div>
+        <div class="footer-h">Навигация</div>
+        <div class="footer-links">
+          <a href="#services">Услуги</a><a href="#stages">Этапы работы</a><a href="#prices">Цены</a><a href="#portfolio">Портфолио</a><a href="#reviews">Отзывы</a><a href="#faq">FAQ</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-h">Контакты</div>
+        <div class="footer-contacts">
+          <div><div class="fl">Телефон</div><a href="tel:+998900621818" class="fv">+998 90 062-18-18</a></div>
+          <div><div class="fl">Telegram</div><a href="https://t.me/BigMaster_uzb" target="_blank" rel="noopener" class="fv">@BigMaster_uzb</a></div>
+          <div><div class="fl">Город</div><div class="fv">Ташкент, Узбекистан</div></div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Все ремонты</span>
+      <span>Ремонт квартир под ключ в Ташкенте</span>
+    </div>
+  </div>
+</footer>
+
+<!-- LIGHTBOX -->
+<div id="lightbox" class="lb-overlay" role="dialog" aria-modal="true" aria-label="Просмотр фото">
+  <button class="lb-close" id="lbClose" aria-label="Закрыть">
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M3 3l14 14M17 3L3 17" stroke="white" stroke-width="2" stroke-linecap="round"/></svg>
+  </button>
+  <img id="lbImg" src="" alt="" />
+  <button class="lb-nav lb-prev" id="lbPrev" aria-label="Предыдущее фото">
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M13 4l-7 6 7 6" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </button>
+  <button class="lb-nav lb-next" id="lbNext" aria-label="Следующее фото">
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M7 4l7 6-7 6" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
