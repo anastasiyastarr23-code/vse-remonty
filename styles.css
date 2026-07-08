@@ -812,17 +812,43 @@ ul { list-style: none; }
   /* Hero facts — выравниваем текст */
   .hero-fact span { font-size: 11px; line-height: 1.3; }
 
+  /* Hero — кнопки на всю ширину */
+  .hero-actions { flex-direction: column; }
+  .hero-actions .btn { width: 100%; text-align: center; justify-content: center; }
+
   /* Сервисы — заголовок big-карточки = обычный */
   .svc-card.big .svc-body h4 { font-size: 17px; }
 
   /* Сервисы — последняя плашка: текст и кнопка в колонку */
-  .svc-extra { flex-direction: column; align-items: flex-start; }
-  .svc-extra span { white-space: nowrap; }
+  .svc-extra { flex-direction: column; align-items: stretch; }
+  .svc-extra span { white-space: normal; }
+  .svc-extra-btn { width: 100%; text-align: center; justify-content: center; }
 
-  /* Почему мы — одинаковое скругление */
+  /* Все плашки — одинаковое скругление 20px */
   .wc1, .wc2, .wc3, .wc4 { border-radius: 20px !important; }
+  .pn-a, .pn-b, .pn-c, .pn-d { border-radius: 20px !important; }
+  .pstep { border-radius: 20px !important; }
+  .faq-item { border-radius: 20px !important; }
+  .rev-card { border-radius: 20px !important; }
+
+  /* FAQ — плашки одинаковой минимальной высоты */
+  .faq-item { min-height: 64px; }
 
   /* FAQ — текст вопросов чёрный */
   .faq-q { color: var(--text); }
   .faq-q:hover { color: var(--orange); }
+
+  /* Отзывы — одна колонка, все карточки одинаковые */
+  .rev-row {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 10px;
+  }
+  .rev1, .rev2, .rev3, .rev4, .rev5, .rev6 {
+    grid-column: unset !important;
+    grid-row: unset !important;
+    border-radius: 20px !important;
+    width: 100%;
+  }
+  .rev5 { flex-direction: column; align-items: flex-start; }
 }
